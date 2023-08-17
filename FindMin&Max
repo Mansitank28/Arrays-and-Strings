@@ -1,0 +1,29 @@
+class Compute 
+{
+    static Pair getMinMax(long a[], long n)  
+    { 
+            long max = a[0];
+            long min = a[0];
+            int len = a.length;
+            for(int i = 0; i< len; i++){
+                if(a[i]>max){
+                    max = a[i];
+
+                }
+                if(a[i]<min){
+                    min = a[i];
+                }
+            }
+            return new Pair(min, max);
+    }
+    
+}
+ /*class Pair  
+{  
+    long first, second;  
+    public Pair(long first, long second)  
+    {  
+        this.first = first;  
+        this.second = second;  
+    }  
+} *
