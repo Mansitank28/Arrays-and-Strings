@@ -1,0 +1,15 @@
+/*Input: nums = [1,3,5,6], target = 5
+Output: 2*/
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+    
+        ArrayList<Integer> lst = new ArrayList<>();
+        for(int i : nums){
+            lst.add(i);
+        }
+        lst.add(target);
+        Collections.sort(lst);
+        int k = lst.indexOf(target);
+        return k;
+    }
+}
