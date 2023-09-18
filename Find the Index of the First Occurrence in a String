@@ -21,7 +21,7 @@ Explanation: "leeto" did not occur in "leetcode", so we return -1.
         int temp = 0;
         if(haystack.length()<len)
                 return -1;
-        for(int i=0; i<=haystack.length()-len; i++){
+        for(int i=0; i<haystack.length(); i++){
 
                 if(haystack.charAt(i)==needle.charAt(temp))
                         temp++;
