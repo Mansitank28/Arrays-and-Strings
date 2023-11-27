@@ -1,0 +1,26 @@
+You need to reverse a given string without using any built-in reverse method. How would you approach this task?
+
+Answer: To reverse a string without using any built-in reverse method, you can convert the string to a character array and swap the characters from the beginning and end of the array. Here’s an example code snippet:
+
+public class ReverseString {
+
+    public static void main(String[] args) {
+        String input = "Hello, World!";
+        char[] characters = input.toCharArray();
+
+        int start = 0;
+        int end = characters.length - 1;
+
+        while (start < end) {
+            char temp = characters[start];
+            characters[start] = characters[end];
+            characters[end] = temp;
+
+            start++;
+            end--;
+        }
+        String reversedString = new String(characters);
+        System.out.println(reversedString);
+
+    }
+}
